@@ -16,7 +16,7 @@ spec:
       - name: backendv1
         image: alepellereca/imagenback:1
         ports:
-        - containerPort: 3000
+        - containerPort: 62695
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -36,17 +36,17 @@ spec:
       - name: backendv2
         image: alepellereca/imagenback:2
         ports:
-        - containerPort: 3000
+        - containerPort: 62695
 ---
 appiVersion: apps/v1
 kind: Service
 metadata:
-  name: backend
+  name: backendservice
   spec:
     type: NodePort
     ports:
-    - port: 3001
-      targetPort: 3000
+    - port: 2376
+      targetPort: 62695
     selector:
       role: backend
 

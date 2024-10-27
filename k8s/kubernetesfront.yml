@@ -16,7 +16,7 @@ spec:
       - name: frontendv1
         image: alepellereca/imagenfront:1
         ports:
-        - containerPort: 8080
+        - containerPort: 62695
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -36,16 +36,16 @@ spec:
       - name: frontendv2
         image: alepellereca/imagenfront:2
         ports:
-        - containerPort: 8080
+        - containerPort: 62695
 ---
 appiVersion: apps/v1
 kind: Service
 metadata:
-  name: frontend
+  name: frontendservice
   spec:
     type: NodePort
     ports:
-    - port: 8081
-      targetPort: 8080
+    - port: 2376
+      targetPort: 62695
     selector:
       role: frontend
