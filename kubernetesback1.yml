@@ -6,11 +6,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      role: backendv1
+      app: backendv1
   template:
     metadata:
       labels:
-        role: backendv1
+        app: backendv1
     spec:
       containers:
       - name: backendv1
@@ -28,4 +28,4 @@ metadata:
     - port: 2376
       targetPort: 62383
     selector:
-      role: backend
+      app: backend

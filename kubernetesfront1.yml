@@ -6,11 +6,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      role: frontendv1
+      app: frontendv1
   template:
     metadata:
       labels:
-        role: frontendv1
+        app: frontendv1
     spec:
       containers:
       - name: frontendv1
@@ -28,4 +28,4 @@ metadata:
     - port: 2376
       targetPort: 62383
     selector:
-      role: frontend
+      app: frontend
