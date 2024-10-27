@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: frontendv2
-        image: alepellereca/imagenfront:2.0
+        image: alepellereca/imagenfront:2
         ports:
         - containerPort: 8080
 ---
