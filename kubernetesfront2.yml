@@ -21,12 +21,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontendservice
-  spec:
-    type: NodePort
-    ports:
-    - port: 2376
-      targetPort: 62383
-    selector:
-      app: frontend
+  name: frontendservicev2
+spec:
+  type: NodePort
+  ports:
+  - port: 2376
+    targetPort: 62383
+  selector:
+    app: frontend
 
