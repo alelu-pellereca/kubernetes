@@ -14,25 +14,25 @@ spec:
           service:
             name: frontendservice
             port:
-              number: 80
+              number: 2376
       - path: /frontendv2
         pathType: Prefix
         backend:
           service:
             name: frontendservice
             port:
-              number: 80
+              number: 2376
       - path: /backendv1
         pathType: Prefix
         backend:
           service:
             name: backendservice
             port:
-              number: 80
+              number: 2376
       - path: /backendv2
         pathType: Prefix
         backend:
           service:
             name: backendservice
             port:
-              number: 80
+              number: 2376

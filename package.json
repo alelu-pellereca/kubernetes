@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "sudo": "^1.0.3"
+    "sudo": "^1.0.3",
+    "systemctl": "^0.2.2"
   }
 }
