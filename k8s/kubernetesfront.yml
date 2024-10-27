@@ -41,23 +41,11 @@ spec:
 appiVersion: apps/v1
 kind: Service
 metadata:
-  name: frontendv1
+  name: frontend
   spec:
     type: NodePort
     ports:
     - port: 8081
       targetPort: 8080
     selector:
-      role: frontendv1
----
-appiVersion: apps/v1
-kind: Service
-metadata:
-  name: frontendv2
-  spec:
-    type: NodePort
-    ports:
-    - port: 8081
-      targetPort: 8080
-    selector:
-      role: frontendv2
+      role: frontend

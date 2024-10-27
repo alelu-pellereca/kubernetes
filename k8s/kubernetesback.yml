@@ -41,23 +41,12 @@ spec:
 appiVersion: apps/v1
 kind: Service
 metadata:
-  name: backendv1
+  name: backend
   spec:
     type: NodePort
     ports:
     - port: 3001
       targetPort: 3000
     selector:
-      role: backendv1
----
-appiVersion: apps/v1
-kind: Service
-metadata:
-  name: backendv2
-  spec:
-    type: NodePort
-    ports:
-    - port: 3001
-      targetPort: 3000
-    selector:
-      role: backendvv2
+      role: backend
+
