@@ -1,0 +1,27 @@
+1- Necesitamos crear un pod que contenga MYSQL -Comprobar que existe el pod. - Eliminarlo - ver si está o no
+2-- Necesitamos tener al menos 3 pods que cada uno de ellos tenga: MYSQL, UBUNTU y una app que hay que se llama hello-world
+  -comprobar que existen
+  -eliminar uno
+  - mirar el yaml de otro
+  - entrar en la terminal del tercero
+  3-- Necesitamos tener un pod que contenga al menos 4 replicas
+  - eliminar uno y ver que ocurre
+
+
+
+
+  Voy a necesitar un pod de un servicio de http. El que queráis, 
+  que corra en el puerto 8080. Necesito 3 réplicas de ese pod. 
+  Debo crear un Deployment para levantar el pod. Y también, 
+  necesito un Servicio de tipo NodePort para poder exponer el 
+  servicio hacia fuera PEEEERO el puerto que debe ser accesible 
+  desde fuera debe ser el puerto 8081.
+ 
+Para poder ver el servicio desplegado 
+necesitamos ejecutar lo siguiente en minikube: 
+                    minikube service <service_name>
+ 
+ 
+Hacer pruebas
+ 
+Y luego crear un servicio tipo LoadBalancer
