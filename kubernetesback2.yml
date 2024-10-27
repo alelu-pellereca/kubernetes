@@ -15,6 +15,7 @@ spec:
       containers:
       - name: backendv2
         image: alepellereca/imagenback:2
+        args: "text=Backend 2 Service"
         ports:
         - containerPort: 62383
 ---
