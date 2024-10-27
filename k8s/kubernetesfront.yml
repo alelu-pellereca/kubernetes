@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontendv1
-        image: grc.io/google-sample/hello-app:1.0
+        image: alepellereca/imagenfront:1
         ports:
         - containerPort: 8080
 ---
@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: frontendv2
-        image: grc.io/google-sample/hello-app:2.0
+        image: alepellereca/imagenfront:2.0
         ports:
         - containerPort: 8080
 ---
