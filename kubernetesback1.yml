@@ -17,3 +17,15 @@ spec:
         image: alepellereca/imagenback:1
         ports:
         - containerPort: 62383
+---
+appiVersion: apps/v1
+kind: Service
+metadata:
+  name: backendservicev1
+  spec:
+    type: NodePort
+    ports:
+    - port: 2376
+      targetPort: 62383
+    selector:
+      role: backend
