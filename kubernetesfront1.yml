@@ -30,4 +30,4 @@ spec:
   - port: 80
     targetPort: 62383
   selector:
-    app: frontend
+    app: frontendv1
