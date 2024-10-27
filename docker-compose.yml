@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  sudo:
+    image: sudo
+    build:
+      context: node_modules/sudo
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
