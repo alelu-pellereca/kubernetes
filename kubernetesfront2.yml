@@ -18,7 +18,7 @@ spec:
         ports:
         - containerPort: 62383
 ---
-appiVersion: apps/v1
+appiVersion: v1
 kind: Service
 metadata:
   name: frontendservice
