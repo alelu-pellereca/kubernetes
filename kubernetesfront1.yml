@@ -15,7 +15,8 @@ spec:
       containers:
       - name: frontendv1
         image: alepellereca/imagenfront:1
-        args: "text=Frontend 1 Service"
+        args:
+        - "text=Frontend 1 Service"
         ports:
         - containerPort: 62383
 ---
