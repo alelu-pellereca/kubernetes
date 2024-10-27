@@ -6,14 +6,14 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      role: hello-v1
+      role: frontendv1
   template:
     metadata:
       labels:
-        role: hello-v1
+        role: frontendv1
     spec:
       containers:
-      - name: hello-v1
+      - name: frontendv1
         image: grc.io/google-sample/hello-app:1.0
         ports:
         - containerPort: 8080
@@ -21,19 +21,19 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-deployment-v2
+  name: frontendv2
 spec:
   replicas: 3
   selector:
     matchLabels:
-      role: hello-v2
+      role: frontendv2
   template:
     metadata:
       labels:
-        role: hello-v2
+        role: frontendv2
     spec:
       containers:
-      - name: hello-v2
+      - name: frontendv2
         image: grc.io/google-sample/hello-app:2.0
         ports:
         - containerPort: 8080
@@ -41,23 +41,23 @@ spec:
 appiVersion: apps/v1
 kind: Service
 metadata:
-  name: hello-v1
+  name: frontendv1
   spec:
     type: NodePort
     ports:
-    - port: 8080
+    - port: 8081
       targetPort: 8080
     selector:
-      role: hello-v1
+      role: frontendv1
 ---
 appiVersion: apps/v1
 kind: Service
 metadata:
-  name: hello-v2
+  name: frontendv2
   spec:
     type: NodePort
     ports:
-    - port: 8080
+    - port: 8081
       targetPort: 8080
     selector:
-      role: hello-v2
+      role: frontendv2
