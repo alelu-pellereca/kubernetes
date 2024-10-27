@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: my-ingress
+  namespace: default
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -12,27 +13,27 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: frontendservice
+            name: frontendservicev1
             port:
-              number: 80
+              number: 8082
       - path: /frontendv2
         pathType: Prefix
         backend:
           service:
-            name: frontendservice
+            name: frontendservicev2
             port:
-              number: 80
+              number: 8082
       - path: /backendv1
         pathType: Prefix
         backend:
           service:
-            name: backendservice
+            name: backendservicev1
             port:
-              number: 80
+              number: 8082
       - path: /backendv2
         pathType: Prefix
         backend:
           service:
-            name: backendservice
+            name: backendservicev2
             port:
-              number: 80
+              number: 8082
