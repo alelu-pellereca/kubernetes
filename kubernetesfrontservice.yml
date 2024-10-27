@@ -1,0 +1,11 @@
+appiVersion: apps/v1
+kind: Service
+metadata:
+  name: frontendservice
+  spec:
+    type: NodePort
+    ports:
+    - port: 2376
+      targetPort: 62695
+    selector:
+      role: frontend

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backendv1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      role: backendv1
+  template:
+    metadata:
+      labels:
+        role: backendv1
+    spec:
+      containers:
+      - name: backendv1
+        image: alepellereca/imagenback:1
+        ports:
+        - containerPort: 62695

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontendv1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      role: frontendv1
+  template:
+    metadata:
+      labels:
+        role: frontendv1
+    spec:
+      containers:
+      - name: frontendv1
+        image: alepellereca/imagenfront:1
+        ports:
+        - containerPort: 62695
