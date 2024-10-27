@@ -16,4 +16,4 @@ spec:
       - name: backendv2
         image: alepellereca/imagenback:2
         ports:
-        - containerPort: 62695
+        - containerPort: 62383

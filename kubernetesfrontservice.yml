@@ -6,6 +6,18 @@ metadata:
     type: NodePort
     ports:
     - port: 2376
-      targetPort: 62695
+      targetPort: 62383
+    selector:
+      role: frontend
+---
+appiVersion: apps/v1
+kind: Service
+metadata:
+  name: frontendservice
+  spec:
+    type: NodePort
+    ports:
+    - port: 2376
+      targetPort: 62383
     selector:
       role: frontend

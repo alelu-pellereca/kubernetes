@@ -16,4 +16,4 @@ spec:
       - name: frontendv1
         image: alepellereca/imagenfront:1
         ports:
-        - containerPort: 62695
+        - containerPort: 62383
