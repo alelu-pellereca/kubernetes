@@ -22,4 +22,4 @@ spec:
           service:
             name: frontendservicev2
             port:
-              number: 8081
+              number: 8080
