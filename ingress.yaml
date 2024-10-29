@@ -15,25 +15,25 @@ spec:
           service:
             name: frontendservicev1
             port:
-              number: 8080
+              number: 8081
       - path: /v1/backend
         pathType: Prefix
         backend:
           service:
             name: backendservicev1
             port:
-              number: 8080
+              number: 8082
       - path: /v2
         pathType: Prefix
         backend:
           service:
             name: frontendservicev2
             port:
-              number: 8080
+              number: 8083
       - path: /v2/backend
         pathType: Prefix
         backend:
           service:
             name: backendservicev2
             port:
-              number: 8080
+              number: 8084

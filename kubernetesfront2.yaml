@@ -18,7 +18,7 @@ spec:
         args:
         - "text=Frontend 1 Service"
         ports:
-        - containerPort: 8080
+        - containerPort: 8083
         resources:
           requests:
             memory: "64Mi"
@@ -34,7 +34,7 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 8080
-    targetPort: 8080
+  - port: 8083
+    targetPort: 8083
   selector:
     app: frontendv2
